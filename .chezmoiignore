@@ -1,0 +1,7 @@
+# Repo organization only, not applied to $HOME
+/common
+/gnome
+/hyprland
+/profiles
+/scripts
+/README.md
