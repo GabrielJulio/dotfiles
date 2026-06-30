@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────
+# secrets / local private data
+# ─────────────────────────────────────────────
+.env
+.env.*
+secrets/
+private/
+local/
+*.agekey
+*.secret
+*.token
+*.credentials
+
+# ─────────────────────────────────────────────
+# SSH safety
+#
+#
+# Ignore everything in private_dot_ssh by default.
+# Only allow safe templates/docs.
+# ─────────────────────────────────────────────
+private_dot_ssh/*
+!private_dot_ssh/config.tmpl
+!private_dot_ssh/README.md
+!private_dot_ssh/.keep
+
+# Also block accidental SSH folders/files anywhere else
+**/.ssh/
+**/dot_ssh/
+**/private_dot_ssh/id_*
+**/private_dot_ssh/*_rsa*
+**/private_dot_ssh/*_ed25519*
+**/private_dot_ssh/*_ecdsa*
+**/private_dot_ssh/*_dsa*
+**/private_dot_ssh/known_hosts
+**/private_dot_ssh/known_hosts.old
+**/private_dot_ssh/authorized_keys
+
+# Common private key extensions/names
+**/*.pem
+**/*.ppk
+**/*.key
+**/*.pub.old
+**/id_rsa
+**/id_rsa.pub
+**/id_ed25519
+**/id_ed25519.pub
+**/id_ecdsa
+**/id_ecdsa.pub
+**/id_dsa
+**/id_dsa.pub
+
+# ─────────────────────────────────────────────
+# VPN / infrastructure configs
+# ─────────────────────────────────────────────
+**/*.ovpn
+**/*.conf.private
+**/*vpn*
+**/*wireguard*
+**/wg0.conf
+
+# ─────────────────────────────────────────────
+# editor / OS noise
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ─────────────────────────────────────────────
+# logs / caches / temp
+# ─────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.backup
+.cache/
+tmp/
+temp/
+
+# ─────────────────────────────────────────────
+# chezmoi local state
+# ─────────────────────────────────────────────
+.chezmoi.toml
+.chezmoi.json
+.chezmoi.yaml
+.chezmoidata.local.*
