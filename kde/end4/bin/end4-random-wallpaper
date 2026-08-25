@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+DIR="$HOME/Pictures/Wallpapers"
+CFG="$HOME/.config/illogical-impulse/end4-pC/config.json"
+
+CURRENT="$(jq -r '.background.wallpaperPath // ""' "$CFG")"
+
+mapfile -d '' FILES < <(
+    find "$DIR" -maxdepth 1 -type f \
+        \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.avif' -o -iname '*.bmp' \) \
+        ! -path "$CURRENT" -print0
+)
+
+((${#FILES[@]})) || exit 0
+
+NEXT="${FILES[RANDOM % ${#FILES[@]}]}"
+
+qs -c end4-pC ipc call wallpapers apply "$NEXT"

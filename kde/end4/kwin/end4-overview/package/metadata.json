@@ -1,0 +1,13 @@
+{
+    "KPackageStructure": "KWin/Effect",
+    "KPlugin": {
+        "Category": "Window Management",
+        "Description": "end-4 styled live window overview",
+        "EnabledByDefault": false,
+        "Id": "end4-overview",
+        "License": "GPL-2.0-or-later",
+        "Name": "end-4 Overview"
+    },
+    "X-KDE-Ordering": 60,
+    "X-Plasma-API": "declarativescript"
+}

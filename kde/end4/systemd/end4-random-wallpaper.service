@@ -1,0 +1,7 @@
+[Unit]
+Description=end-4 Random Wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=%h/dotfiles/kde/end4/bin/end4-random-wallpaper
+

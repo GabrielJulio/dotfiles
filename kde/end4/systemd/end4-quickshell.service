@@ -1,0 +1,18 @@
+[Unit]
+Description=end-4 Quickshell desktop shell
+PartOf=graphical-session.target
+After=graphical-session.target end4-kwin-bridge.service
+Wants=end4-kwin-bridge.service end4-cliphist.service
+
+[Service]
+Type=simple
+Environment=PATH=/home/linuxbrew/.linuxbrew/bin:%h/.local/bin:%h/.cargo/bin:/usr/local/bin:/usr/bin:/bin
+Environment=XCURSOR_THEME=BAREBLOOD-cursor
+Environment=XCURSOR_SIZE=48
+ExecStart=/usr/bin/qs -c end4-pC
+Restart=always
+RestartSec=2
+KillMode=process
+
+[Install]
+WantedBy=graphical-session.target
