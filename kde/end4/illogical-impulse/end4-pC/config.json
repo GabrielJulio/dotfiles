@@ -91,7 +91,7 @@
     "showSnapLines": true,
     "thumbnailPath": "",
     "wallpaperAnimation": "magic",
-    "wallpaperPath": "/home/julio/Pictures/Wallpapers/random_wallpaper.png",
+    "wallpaperPath": "/home/julio/Pictures/Wallpapers/Elden-Ring-Shadow-of-the-Erdtree-Wallpaper.jpg",
     "widgets": {
       "calendar": {
         "enable": false,
@@ -218,7 +218,7 @@
         "y": 100
       }
     },
-    "widgetsLocked": false
+    "widgetsLocked": true
   },
   "bar": {
     "autoHide": {
